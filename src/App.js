@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Clock from './Clock.js';
-
-
+import Stopwatch from './Stopwatch.js';
 let removeClock = false;
 
 class App extends Component {
   render() {
     return (
+      
       <div className="App">
         {!removeClock && <Clock />}
 
@@ -17,7 +17,8 @@ class App extends Component {
         { removeClock &&
           <button type="button" onClick={() => {removeClock = false; this.forceUpdate()}}>Add clock</button>
         }
-      </div>
+        <Stopwatch/>
+        </div>
     );
   }
 }
