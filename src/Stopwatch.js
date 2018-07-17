@@ -36,7 +36,8 @@ class Stopwatch extends Component {
     
     onClear() {
         this.setState({
-            elapsedTime: 0
+            elapsedTime: 0,
+            isRunning: false
         });
     }
     render() {
