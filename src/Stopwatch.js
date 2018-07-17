@@ -47,7 +47,7 @@ class Stopwatch extends Component {
                 <TimeDisplay time={this.state.elapsedTime} />
                 <br/>
                 <StartPauseButton isRunning={this.state.isRunning} onStartOrPause={this.onStartOrPause}/>
-                <ClearButton onClick={this.onClear} />
+                <ClearButton onClear={this.onClear} isdisabled={this.state.isRunning || this.state.elapsedTime === 0 }/>
             </div>
         );
     }
