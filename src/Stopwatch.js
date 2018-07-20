@@ -8,6 +8,7 @@ class Stopwatch extends Component {
         this.state = {
              isRunning: false,
              elapsedTime: 0,
+             previousTick: new Date()
          }
          
         this.onStartOrPause=this.onStartOrPause.bind(this);
@@ -29,8 +30,11 @@ class Stopwatch extends Component {
         }
      }
     tick() {
+        let now = new Date();
         this.setState({
-            elapsedTime: this.state.elapsedTime + 10
+            // elapsedTime: this.state.elapsedTime + 10
+            elapsedTime: this.state.elapsedTime + (now - this.state.previousTick),
+            previousTick: now
         });
     }
     
