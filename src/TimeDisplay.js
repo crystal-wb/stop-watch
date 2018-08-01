@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Typography from '@material-ui/core/Typography';
 export default function TimeDisplay(props){
     let seconds = Math.trunc(props.time/1000);
     let minutes = Math.trunc(seconds/60);
@@ -10,6 +11,6 @@ export default function TimeDisplay(props){
         minutes = minutes - (hours * 60)
     }
     return <div>
-    <p>{hours}:{minutes}:{seconds}</p>
+    <Typography variant='display4'>{hours}:{minutes}:{seconds}</Typography>
     </div>;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 // export default function StartPauseButton(props) {
 //     let text;
 //     if(props.isRunning) {
@@ -16,7 +17,7 @@ class StartPauseButton extends Component {
     if(this.props.isRunning) {
         text = 'Pause'
     }
-    return <button type="button" onClick={this.props.onStartOrPause}>{text}</button>;
+    return <Button variant='contained' style={{margin: '1em'}} color="primary" type="button" onClick={this.props.onStartOrPause}>{text}</Button>;
     }
 }
 
